@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 
 let crono = null;
-let ms = 0;
 let ss = 0;
 let mm = 0;
 let hh = 0;
@@ -29,7 +28,6 @@ const App = () => {
           ss = 0;
           mm++;
         }
-
         if (mm == 60) {
           mm = 0;
           hh++;
@@ -56,12 +54,12 @@ const App = () => {
       crono = null;
     }
 
-    setNumero(0);
-    let ss = 0;
-    let mm = 0;
-    let hh = 0;
-    setBotao('PLAY');
     setHistoric(numero);
+    setNumero(0);
+    ss = 0;
+    mm = 0;
+    hh = 0;
+    setBotao('PLAY');
   }
 
   return (
@@ -79,7 +77,7 @@ const App = () => {
           <Text style={[styles.btnTexto, {color: corDeFundo}]}>{botao}</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.botao} onPress={limpar}>
-          <Text style={[styles.btnTexto, {color: corDeFundo}]}>LIMPAR</Text>
+          <Text style={[styles.btnTexto, {color: corDeFundo}]}>CLEAR</Text>
         </TouchableOpacity>
       </View>
       <View>
